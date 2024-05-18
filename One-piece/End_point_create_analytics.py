@@ -63,5 +63,6 @@ def devil_fruit_users():
     conn.close()
     return jsonify({'devil_fruit_users': total})
 
+# Запуска flask-сервера на порту 5000 для вывода аналитик из бд
 if __name__ == '__main__':
     app.run(port=5000)
