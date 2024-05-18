@@ -1,0 +1,14 @@
+import sqlite3
+
+def clear_database():
+    conn = sqlite3.connect('one_piece.db')
+    cur = conn.cursor()
+    
+    cur.execute('DELETE FROM characters')
+    conn.commit()
+    
+    conn.close()
+    print("Database cleared.")
+
+if __name__ == "__main__":
+    clear_database()
